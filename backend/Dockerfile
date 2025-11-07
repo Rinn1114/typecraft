@@ -5,7 +5,7 @@ FROM golang:1.21-alpine AS builder
 WORKDIR /app
 
 # 复制 go.mod 和 go.sum 文件，利用 Docker 的缓存机制
-COPY go.mod go.sum ./
+COPY go.* ./
 # 下载依赖
 RUN go mod download
 
